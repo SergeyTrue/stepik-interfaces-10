@@ -15,15 +15,11 @@ func main() {
 	var ok bool
 	var oper string
 	value1, value2, operation := readTask()
-	if v1, ok = value1.(float64); ok {
-	} else {
-		fmt.Printf("value=%v: %T\n", value1, value1)
+	if v1, ok = value1.(float64); !ok {
 		return
 	}
 
-	if v2, ok = value2.(float64); ok {
-	} else {
-		fmt.Printf("value=%v: %T\n", value2, value2)
+	if v2, ok = value2.(float64); !ok {
 		return
 	}
 
